@@ -82,7 +82,7 @@ So, now it's much easier for me to read a code and find needed line to amend a c
 2. Smooth code
 3. FastCode.AHK can be used independently from Replace.AHK, since Replace.AHK is only kind of tricky file as and addition to the main idea. 
 
-## List the licensing information for your project.
+## List the licensing information.
 
 Script share under GNU general public license v3.0. [Details](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
