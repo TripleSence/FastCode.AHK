@@ -4,7 +4,7 @@
 ;  https://www.autohotkey.com/boards/viewtopic.php?f=6&t=107165
 ;
 ;  Author  : MostWanted
-;  Version : 1.3
+;  Version : 1.4
 ;  Date    : 2022-08-10
 ;
 ;  Usage:  (required AHK v1.1.31+)
@@ -26,6 +26,48 @@ ControlGet bEnabled, Visible,, %btnname%, %winname%
 If bEnabled
 Break
 }
+}
+;end of function
+
+;function will wait for possible window and will click on it
+wait_possible_window(winname, btnname, timeifwin) {
+Sleep, %timeifwin%
+If WinActive(winname) ;server connection window
+{
+Loop {
+ControlGet bEnabled, Visible,, %btnname%, %winname%
+If bEnabled
+Break
+}
+Sleep, 400
+ControlClick, %btnname%, %winname%
+}
+}
+;end of function
+
+;function will activate specific window from background and some visible button inside
+activate_some_window(winname, btnname) {
+WinActivate, %winname% ;activate window
+WinWaitActive, %winname% ;wait for window
+Sleep, 200
+Loop {
+ControlGet bEnabled, Visible,, %btnname%, %winname%
+If bEnabled
+Break
+}
+}
+;end of function
+
+;function will close specific window
+close_some_window(winname) {
+Sleep, 300
+WinClose, %winname%
+}
+;end of function
+
+;function holds a script performance for some specific time in miliseconds
+sleep_some_time(sleeptime) {
+Sleep, %sleeptime%
 }
 ;end of function
 

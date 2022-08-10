@@ -23,18 +23,7 @@ SetTitleMatchMode, 2
 Global window_name, button_name
 
 ;Automation code START
-;wait for specific window and then specific button
-window_name := "new 1 - Notepad++"
-button_name := "ToolbarWindow321"
-gosub, wait_for_win
 
-;send some text or keys combination
-sometext := "Hi, dear!"
-gosub, text_key_send
-
-;Show message box with text
-messagetext := "done!"
-gosub, somemessagebox
 
 
 return
@@ -44,6 +33,15 @@ return
 ;sburoutine of waitng for specific window and button of that window
 wait_for_win:
 wait_window(window_name, button_name)
+return
+
+wait_for_possible_win:
+wait_possible_window(window_name, button_name, time_for_wait)
+return
+
+;sburoutine of waitng for specific window and button of that window
+active_some_win:
+activate_some_window(window_name, button_name)
 return
 
 ;sburoutine of waitng for visible button
@@ -68,7 +66,12 @@ return
 
 ;sburoutine of waitng for specific window and button of that window
 sleep_some_time:
-Sleep, 300
+sleep_some_time(sleeptime)
+return 
+
+;sburoutine will close specific window
+close_some_win:
+close_some_window(window_name)
 return 
 
 ;sburoutine of selecting needed menu
@@ -85,4 +88,4 @@ return
 somemessagebox:
 some_message_box(messagetext)
 return 
-;Subroutines list START
+;Subroutines list END
