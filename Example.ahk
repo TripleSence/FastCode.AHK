@@ -16,76 +16,28 @@ SendMode Input
 SetTitleMatchMode, 2
 ;OPTIMIZATIONS END
 
-;function library with Automation functions
+;Include FastCode.AHK library that includes automation functions to simplify codding
 #Include Lib\FastCode.ahk
 
-;Globals variables to use in script
-Global window_name, button_name
+;Globals variables to use in script, related to functions of FastCode.AHK library
+Global winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1
 
 ;Automation code START
+
+;wait for specific window START
+winname := "Snipping Tool" ;window name/class
+btnname := "Try Snip & Sketch" ;button class/text
+Window.wait() ;function that waits for specific window and then specific button inside of it
+;wait for specific window FINISH
+
+;Show message box with text START
+messagetext := "done!" ;text to show in message box
+ShowMessage() ;function that shows message box with specific text inside
+;Show message box with text FINISH
 
 
 
 return
 ;Automation code END
 
-;Subroutines list START
-;sburoutine of waitng for specific window and button of that window
-wait_for_win:
-wait_window(window_name, button_name)
-return
 
-wait_for_possible_win:
-wait_possible_window(window_name, button_name, time_for_wait)
-return
-
-;sburoutine of waitng for specific window and button of that window
-active_some_win:
-activate_some_window(window_name, button_name)
-return
-
-;sburoutine of waitng for visible button
-wait_for_button_visible:
-wait_button_visible(button_name, window_name)
-return
-
-;sburoutine of waitng for active/enabled button
-wait_for_button_enabled:
-wait_button_enabled(button_name, window_name)
-return
-
-;sburoutine of click on button
-button_click:
-click_button(button_name, window_name)
-return
-
-;sburoutine of focus on button
-button_focus:
-focus_button(button_name, window_name)
-return 
-
-;sburoutine of waitng for specific window and button of that window
-sleep_some_time:
-sleep_some_time(sleeptime)
-return 
-
-;sburoutine will close specific window
-close_some_win:
-close_some_window(window_name)
-return 
-
-;sburoutine of selecting needed menu
-menu_select:
-select_needed_menu(winname, menu1, submenu1)
-return 
-
-;sburoutine of selecting needed menu
-text_key_send:
-type_send_something(sometext)
-return 
-
-;sburoutine of selecting needed menu
-somemessagebox:
-some_message_box(messagetext)
-return 
-;Subroutines list END
