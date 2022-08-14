@@ -48,9 +48,13 @@ Break
 1. I run Replace.AHK file, that contains Hotstrings with needed function lines.
 2. I type in code editor Hotstring, for example "wwa."
 
-Script Replace.AHK that running in the background replaces the Hostring with next line of code:
+Script Replace.AHK that running in the background replaces the Hostring with next lines of code:
 ```
-wait_window("WindowName", "ButtonName")
+;wait for specific window START
+winname := "WindowName" ;window name/class
+btnname := "ButtonName" ;button class/text
+Window.wait() ;function that waits for specific window and then specific button inside of it
+;wait for specific window FINISH
 ```
 So, again, "wwa." is my key-phrase for "WinWaitActive" command that encased in FastCode.AHK function.
 
@@ -59,7 +63,11 @@ So, for "WindowName" I can use title of the window or class and for "ButtonName"
 
 **As a result I have next final code:**
 ```
-wait_window("ahk_class Microsoft-Windows-SnipperToolbar", "Button3")
+;wait for specific window START
+winname := "Snipping Tool" ;window name/class
+btnname := "Try Snip & Sketch" ;button class/text
+Window.wait() ;function that waits for specific window and then specific button inside of it
+;wait for specific window FINISH
 ```
 
 **instead of:**
