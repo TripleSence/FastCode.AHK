@@ -43,7 +43,7 @@ Break
 - hard to read a code even with comments
 
 ## How I do it with FastCode:
-![Screenshot of Replace.AHK user interface](https://raw.githubusercontent.com/TripleSence/FastCode.AHK/main/Replace%20GUI.JPG)
+![Screenshot of Replace.AHK user interface](https://raw.githubusercontent.com/TripleSence/FastCode.AHK/138be4c97de430afc55c035e5f7e2337088f9d8a/Replace%20GUI.JPG)
 
 1. I run Replace.AHK file, that contains Hotstrings with needed function lines.
 2. I type in code editor Hotstring, for example "wwa."
