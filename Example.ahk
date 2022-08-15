@@ -20,7 +20,7 @@ SetTitleMatchMode, 2
 #Include Lib\FastCode.ahk
 
 ;Globals variables to use in script, related to functions of FastCode.AHK library
-Global winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1
+Global winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1, sleeptime
 
 ;Automation code START
 

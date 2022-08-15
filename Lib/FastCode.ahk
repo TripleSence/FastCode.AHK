@@ -6,14 +6,14 @@
 ;
 ;  Author  : MostWanted (TripleSence)
 ;  Version : 1.5
-;  Date    : 2022-08-13
+;  Date    : 2022-08-14
 ;
 ;  Usage:  (required AHK v1.1.31+)
 ;  1. Contains functions with the most used commands, so that coders can just use functions to make simple AHK coding. 
 ;  2. Zip file also comes with an AHK file called "Replace" that allows you to simplify the input of functions to speed-up coding.
 ;  3. When test is successful, you may copy the code
 ;  4. To start using FastCode, don't forget to include the library into the code with the "#Include" command.
-;  5. Global variables related to functions, that need to be created in scripts: winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1. Example of usage: put "Global winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1" in the beginning of the script, that you create
+;  5. Global variables related to functions, that need to be created in scripts: winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1. Example of usage: put "Global winname, btnname, timeifwin, messagetext, text_keys, menu1, submenu1, sleeptime" in the beginning of the script, that you create
 ;===========================================
 ;*/
 
